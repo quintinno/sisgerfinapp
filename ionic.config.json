@@ -1,0 +1,7 @@
+{
+  "name": "sisgerfinapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

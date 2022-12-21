@@ -1,0 +1,41 @@
+// ion-header {
+//     border: red dashed 2px;
+
+//     ion-toolbar {
+//         display: flex;
+//         align-items: center;
+
+//         ion-label {
+//             border: red dashed 2px;
+//         }
+
+//         ion-icon {
+//             border: red dashed 2px;
+//         }
+//     }
+// }
+
+.container-saldo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ion-text {
+        font-size: 0.9rem;
+        color: #727272;
+    }
+    ion-label {
+        font-size: 2rem;
+        margin-top: 2%;
+        font-weight: bold;
+        color: #1f1f1f;
+    }
+    ion-icon {
+        font-size: 1.5rem;
+        margin-top: 2%;
+        color: #767676;
+    }
+}
+
+ion-content {
+    --background: #ecf3fb;
+}

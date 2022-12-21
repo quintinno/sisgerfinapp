@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar class="ion-text-center">
+    <ion-title>
+      <ion-label style="font-weight: bold;">
+        Dezembro
+      </ion-label>
+      <ion-icon name="chevron-down-outline" style="margin-left: 1%; margin-bottom: -2%; font-size: 26px;"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+
+  <div class="container-saldo">
+    <ion-text>
+      Saldo em contas
+    </ion-text>
+    <ion-label>R$ 28.000,00</ion-label>
+    <ion-icon name="eye-outline"></ion-icon>
+  </div>
+
+  <div class="container-receita-despesa ion-padding" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+      <ion-avatar (click)="redirecionarTelaReceita()" style="background: #4cb050; width: 50px; height: 50px;">
+        <ion-icon name="arrow-up-outline" style="color: #FFFFFF; font-size: 30px; margin-left: 18%; margin-top: 18%;"></ion-icon>
+      </ion-avatar>
+      <ion-text style="margin-left: -3%; margin-top: 1%; color: #090909;">
+        Receitas
+        <p style="margin-top: 6%; color: #4cb050; font-weight: bold;">R$ 8.000,00</p>
+      </ion-text>
+
+      <ion-avatar (click)="redirecionarTelaDespesa()" style="background: #f44236; width: 50px; height: 50px;">
+        <ion-icon name="arrow-down-outline" style="color: #FFFFFF; font-size: 30px; margin-left: 18%; margin-top: 18%;"></ion-icon>
+      </ion-avatar>
+      <ion-text style="margin-left: -3%; margin-top: 1%; color: #090909;">
+        Despesas
+        <p style="margin-top: 6%; color: #f44236; font-weight: bold;">R$ 8.000,00</p>
+      </ion-text>
+
+  </div>
+
+</ion-header>
+
+<ion-content>
+
+</ion-content>
