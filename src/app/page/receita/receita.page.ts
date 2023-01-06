@@ -9,7 +9,14 @@ export class ReceitaPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public mesAnterior() {
+    console.log("mesAnterior...");
+  }
+
+  public mesPosterior() {
+    console.log("mesPosterior...");
   }
 
 }

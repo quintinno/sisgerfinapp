@@ -1,0 +1,44 @@
+ion-header {
+    ion-toolbar {
+        --background: #4cb050;
+        --color: #FFFFFF;
+    }
+}
+
+ion-content {
+    --background: #4cb050;
+    --color: #FFFFFF;
+}
+
+.periodo-financeiro {
+    background: #4cb050;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.content-container {
+    margin-top: 10px;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 20px 20px 0px 0px;
+    height: 500px;
+    ion-col {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ion-icon {
+            font-size: 22px;
+            color: #575757;
+        }
+    }
+    ion-label {
+        font-size: 12px;
+        margin-left: 6%;
+    }
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4cb050;
+        margin-top: 6px;
+    }
+}

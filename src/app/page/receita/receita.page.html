@@ -1,9 +1,59 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>receita</ion-title>
+    <ion-title>Receitas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" color="light"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="funnel-outline" color="light"></ion-icon>
+      </ion-button>
+      <!-- <ion-button>
+        <ion-icon name="ellipsis-vertical-outline" color="light"></ion-icon>
+      </ion-button> -->
+      <ion-button routerLink="/receita/receita-cadastrar">
+        <ion-icon name="add-circle-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<div class="periodo-financeiro">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="chevron-back-outline" (click)="mesAnterior()"></ion-icon>
+      </ion-col>
+      <ion-col>Janeiro</ion-col>
+      <ion-col>
+        <ion-icon name="chevron-forward-outline" (click)="mesPosterior()"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 
 <ion-content>
+
+  <div class="content-container ion-padding">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <ion-label>
+            Total Pendente
+            <p>R$ 00,00</p>
+          </ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="wallet-outline"></ion-icon>
+          <ion-label>
+            Total Recebido
+            <p>R$ 00,00</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
 
 </ion-content>
