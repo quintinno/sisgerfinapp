@@ -40,13 +40,32 @@ ion-content {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                ion-col {
-                    // border: red dashed 1px;
-                }
                 ion-badge {
                     margin-left: 4px;
+                    padding: 12px;
+                    font-size: 12px;
+                    border-radius: 20px;
+                }
+                ion-col {
+                    .icone {
+                        font-size: 20px;
+                        color: rgb(159, 158, 158);
+                    }
+                    ion-label {
+                        color: rgb(159, 158, 158);
+                    }
+                    ion-button {
+                        text-transform: none;
+                        --border-radius: 20px;
+                    }
                 }
             }
         }
+    }
+    .mais-detalhes {
+        text-align: center;
+        color: #4cb050;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 }

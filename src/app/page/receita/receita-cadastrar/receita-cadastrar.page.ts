@@ -9,7 +9,10 @@ export class ReceitaCadastrarPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public apresentarMaisDetalhes() {
+
   }
 
 }
