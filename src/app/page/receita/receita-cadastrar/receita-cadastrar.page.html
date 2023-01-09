@@ -1,9 +1,28 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>receita-cadastrar</ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/receita">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nova Receita</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <div class="container-valor ion-padding">
+
+    <ion-label>
+      Valor da Receita
+      <p>R$ 00,00</p>
+    </ion-label>
+
+    <ion-text>
+      BRL
+      <ion-icon name="caret-down-outline"></ion-icon>
+    </ion-text>
+
+  </div>
 
 </ion-content>
