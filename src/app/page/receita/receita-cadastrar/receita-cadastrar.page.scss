@@ -68,4 +68,12 @@ ion-content {
         font-weight: bold;
         text-transform: uppercase;
     }
+    .acao-grid:hover {
+        background: rgb(246, 246, 246);
+        border-radius: 20px;
+    }
+    .acao-grid:focus {
+        background: rgb(246, 246, 246);
+        border-radius: 20px;
+    }
 }

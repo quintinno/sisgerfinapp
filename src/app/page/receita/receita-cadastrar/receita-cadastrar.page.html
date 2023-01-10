@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button routerLink="/receita">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon name="arrow-back-outline" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Nova Receita</ion-title>
@@ -29,10 +29,10 @@
             <ion-icon name="pricetag-outline" class="icone"></ion-icon>
           </ion-col>
           <ion-col size="8">
-            <b>Recebido</b>
+            <b>{{ isRecebido ? 'Recebido' : 'Não Recebido' }}</b>
           </ion-col>
           <ion-col size="2">
-            <ion-toggle checked="true" color="success"></ion-toggle>
+            <ion-toggle [checked]="isRecebido" (ionChange)="verificarValorRecebido($event)" color="success"></ion-toggle>
           </ion-col>
         </ion-row>
     </ion-grid>
@@ -59,11 +59,11 @@
         <ion-input placeholder="Descrição"></ion-input>
       </ion-col>
       <ion-col size="2" class="ion-text-right">
-        <ion-icon name="heart-outline" class="icone"></ion-icon>
+        <ion-icon [name]="iconeCoracao" (click)="adicionarPessoa()" class="icone"></ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
+  <ion-grid (click)="abrirCategoriaDespesa()" class="acao-grid">
     <ion-row>
       <ion-col size="2">
         <ion-icon name="archive-outline" class="icone"></ion-icon>
@@ -76,7 +76,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid>
+  <ion-grid (click)="abrirContaBancaria()">
     <ion-row>
       <ion-col size="2">
         <ion-icon name="wallet-outline" class="icone"></ion-icon>
@@ -90,7 +90,7 @@
     </ion-row>
   </ion-grid>
   <ion-grid>
-    <ion-row>
+    <ion-row (click)="abrirAnexos()">
       <ion-col size="2">
         <ion-icon name="images-outline" class="icone"></ion-icon>
       </ion-col>
