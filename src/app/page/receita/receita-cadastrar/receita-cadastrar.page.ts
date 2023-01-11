@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { CalendarioModalPage } from './../../../modal/calendario-modal/calendario-modal.page';
 
 @Component({
   selector: 'app-receita-cadastrar',
@@ -7,15 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaCadastrarPage implements OnInit {
 
-  public isRecebido: boolean = true;
+  public isRecebido: boolean = false;
   public iconeCoracao: string = "heart-outline";
+  public isApresentarMaisDetalhes: boolean = false;
 
-  constructor() { }
+  constructor (
+    private modalController: ModalController
+  ) { }
 
   ngOnInit() { }
 
   public apresentarMaisDetalhes() {
-    console.log("apresentarMaisDetalhes...");
+    if (this.isApresentarMaisDetalhes) {
+      this.isApresentarMaisDetalhes = false;
+    } else {
+      this.isApresentarMaisDetalhes = true;
+    }
   }
 
   public abrirCategoriaDespesa() {
@@ -39,13 +48,23 @@ export class ReceitaCadastrarPage implements OnInit {
   }
 
   public adicionarPessoa() {
-    console.log("adicionarPessoa...");
     if (this.iconeCoracao == "heart-outline") {
       this.iconeCoracao = "heart";
     } else {
       this.iconeCoracao = "heart-outline";
     }
-    debugger
   }
+
+  public async redirecionarModalCalendario() {
+      const modal = await this.modalController.create({
+        component: CalendarioModalPage,
+        initialBreakpoint: 0.5
+      });
+      modal.present();
+  }
+
+  public async redirecionarModalCategoria() { }
+
+  public async redirecionarModalInstituicaoFinanceira() { }
 
 }
