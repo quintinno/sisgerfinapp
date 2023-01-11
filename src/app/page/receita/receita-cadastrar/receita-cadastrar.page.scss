@@ -18,11 +18,12 @@ ion-content {
         height: 100px;
         ion-label {
             font-size: 12px;
-            p {
-                font-size: 24px;
+            ion-input[placeholder] {
                 color: white;
+                font-size: 24px;
                 margin-top: 9px;
                 font-weight: bold;
+                width: 250px;
             }
         }
         ion-text {
